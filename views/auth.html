@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Authentication Form</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body-auth">
+  <div class="customer-auth">
+    <form class="auth-form" id="auth-form"> <!-- Added id="auth-form" here -->
+      <h2>Login</h2>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('auth-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevents the default form submission behavior
+      // You can add your login logic here (e.g., check username and password)
+
+      // For demonstration purposes, redirect to another page after clicking Login
+      window.location.href = './table.html'; 
+    });
+  </script>
+</body>
+</html>
